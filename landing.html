@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--    SCRIPT BOTON CABECERA-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            var $despliega = 0;
+
+            $(".btn_compra1").click(function (e) {
+                e.preventDefault();
+
+                if ($despliega == 0) {
+                    $(".contenedor_btn_cabecera").css("height", "220px");
+                    $despliega = 1;
+                } else {
+                    $(".contenedor_btn_cabecera").css("height", "60px");
+                    $despliega = 0;
+                }
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <header class="cabecera">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="titular_cabecera">
+                <h1>La forma<br>
+              más dulce<br>
+              de cuidarte
+              </h1>
+                <div class="contenedor_btn_cabecera">
+                    <a href="" class="btn_compra1">COMPRA AHORA</a>
+                    <a href="#" class="btn_desplegable">SABOR VAINILLA</a>
+                    <a href="#" class="btn_desplegable">SABOR CHOCOLATE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="producto_cabecera">
+            <div class="contenedor_relativo_cabecera">
+                <div class="img_producto_cabecera">
+                    <img src="img/producto_cabecera.png" alt="">
+                </div>
+                <div class="texto_producto_cabecera">
+                    SABOR VAINILLA
+                </div>
+                <div class="texto_producto_cabecera2">
+                    SABOR CHOCOLATE
+                </div>
+            </div>
+            <img src="img/separador_cabecera.png" alt="">
+        </div>
+
+    </header>
+
+    <section class="bloque2">
+
+        <h2>Beneficios clave</h2>
+        <div class="linea_titular"></div>
+
+        <div class="bloque2_1">
+            <img src="img/producto.jpg" alt="">
+        </div>
+
+        <div class="bloque2_2">
+            <img src="img/flecha_beneficios.jpg" class="flecha_beneficios" alt=""> Bajo en calorías aportando solo <span class="destaca_beneficios">120 calorías por comida</span>
+            <div class="clear"></div>
+
+            <img src="img/flecha_beneficios.jpg" class="flecha_beneficios" alt=""> Tiene un <span class="destaca_beneficios">alto poder saciante</span> para que te olvides de pasar hambre
+            <div class="clear"></div>
+
+            <img src="img/flecha_beneficios.jpg" class="flecha_beneficios" alt=""> Contiene <span class="destaca_beneficios">la cantidad perfecta de proteína</span> para mantener tus músculos tonificados
+            <div class="clear"></div>
+
+            <img src="img/flecha_beneficios.jpg" class="flecha_beneficios2" alt="">
+            <span class="destaca_beneficios">Sin azúcares añadidos</span>
+            <div class="clear"></div>
+
+            <img src="img/flecha_beneficios.jpg" class="flecha_beneficios" alt="">
+            <span class="destaca_beneficios">Contiene 30 raciones para que tengas tu momento dulce cada día del mes</span>
+            <div class="clear"></div>
+
+
+        </div>
+
+        <div class="clear"></div>
+
+    </section>
+
+
+    <section class="bloque3">
+
+
+
+        <div class="bloque3_contenedor">
+            <h2>¿Qué es TastyFit?</h2>
+            <div class="linea_titular_blanca"></div>
+
+            <div class="bloque3_1">
+                <div class="icono"><img src="img/icono1.png" alt=""></div>
+                <h3>DISFRUTA</h3>
+                <div class="texto_icono">
+                    ¿Te imaginas tu alimentación perfecta sin disfrutar de cada comida? Nosotros tampoco.
+                </div>
+            </div>
+
+            <div class="bloque3_1">
+                <div class="icono"><img src="img/icono2.png" alt=""></div>
+                <h3>MEJORA</h3>
+                <div class="texto_icono">
+                    ¿Sacrificios? No gracias. Mejora día a día con nuevos hábitos que te lleven a tu objetivo.
+                </div>
+            </div>
+
+            <div class="bloque3_1">
+                <div class="icono"><img src="img/icono3.png" alt=""></div>
+                <h3>A TU RITMO</h3>
+                <div class="texto_icono">
+                    ¿Y si no tienes tiempo? Tu alimentación no sería perfecta si no se adapta a tu ritmo de vida.
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+    </section>
+
+
+<section class="bloque4">
+    <div class="bloque4_blanco">
+        
+            <div class="bloque4_cont">
+        <div class="bloque4_1 margen_derecha">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor fringilla nibh imperdiet vestibulum. Integer convallis varius elementum. Sed eget ornare magna. Nullam maximus congue eros, non feugiat ligula accumsan id. Quisque euismod diam mollis ipsum auctor finibus.</p>
+            
+            <h4>María García</h4>
+            <h5>Barcelona</h5>
+            <img src="img/testimonio1.jpg" alt="">
+        </div>
+        
+         <div class="bloque4_1 margen_derecha">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor fringilla nibh imperdiet vestibulum. Integer convallis varius elementum. Sed eget ornare magna. Nullam maximus congue eros, non feugiat ligula accumsan id. Quisque euismod diam mollis ipsum auctor finibus.</p>
+            
+            <h4>Fátima González</h4>
+            <h5>Valencia</h5>
+            <img src="img/testimonio2.jpg" alt="">
+        </div>
+        
+         <div class="bloque4_1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor fringilla nibh imperdiet vestibulum. Integer convallis varius elementum. Sed eget ornare magna. Nullam maximus congue eros, non feugiat ligula accumsan id. Quisque euismod diam mollis ipsum auctor finibus.</p>
+            
+            <h4>Elena Rodríguez</h4>
+            <h5>Bilbao</h5>
+            <img src="img/testimonio3.jpg" alt="">
+        </div>
+        
+      
+    </div>
+        
+        
+    </div>
+    
+    <div class="bloque4_gris">
+   
+    </div>
+</section>
+
+<section class="bloque_compra">
+    <a href="#" class="btn_compra_inferior">COMPRA AHORA</a>
+</section>
+
+<section class="bloque5">
+    <h3>SUSCRÍBETE A NUESTRA NEWSLETTER</h3>
+    
+    <div class="contenedor_form">
+        <form action="">
+            <input type="text" class="campo" placeholder="Introduce tu email">
+            <input type="submit" class="enviar" value="ENVIAR">
+        </form>
+        
+        <div class="clear"></div>
+    </div>
+</section>
+
+<footer>
+   <div class="logo_pie"><img src="img/logo_pie.png" alt=""></div>
+    
+</footer>
+
+</body>
+
+</html>
