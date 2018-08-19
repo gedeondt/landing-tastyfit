@@ -27,19 +27,6 @@
 
             })
 
-            $(".btn_compra1").click(function (e) {
-                e.preventDefault();
-
-                if ($despliega == 0) {
-                    $(".contenedor_btn_cabecera").css("height", "220px");
-                    $despliega = 1;
-                } else {
-                    $(".contenedor_btn_cabecera").css("height", "60px");
-                    $despliega = 0;
-                }
-
-            })
-
             $('#vainilla,#chocolate').change(function(){
               var price = (parseInt($('#vainilla').val()) + parseInt($('#chocolate').val())) * 25;
               $('.submit-button').val("A caja: "+price+"€");
