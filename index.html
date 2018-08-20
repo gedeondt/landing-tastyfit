@@ -32,6 +32,44 @@
               $('.submit-button').val("A caja: "+price+"€");
             });
         })
+
+        function validar()
+        {
+          var price = (parseInt($('#vainilla').val()) + parseInt($('#chocolate').val())) * 2500;
+          var handler = StripeCheckout.configure({
+            key: 'pk_test_ISvmeOvnN2Yt07LgVV5IWplO',
+            image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+            locale: 'auto',
+
+            token: function(token) {
+              $.ajax({
+                 url: "https://script.google.com/macros/s/AKfycbxwDZz4lvKm0BnUSDZQTk_7XjiWFvLgMCrd7Q22jg/exec",
+                 jsonp: "callback",
+                 dataType: "jsonp",
+
+                 data: {
+                   token: token.id,
+                   description: $('#vainilla').val()+' Vainilla - '+$('#chocolate').val()+' Chocolate',
+                   ammount: price,
+                   email: token.email
+                 },
+
+                 success: function( response ) {
+                   alert("Gracias por tu compra, en breve recibirás información sobre tu pedido");
+                   console.log( response ); // server response
+                 }
+              });
+            }
+          });
+
+
+          handler.open({
+           name: 'Tasty Fitness SL',
+           description: $('#vainilla').val()+' Vainilla - '+$('#chocolate').val()+' Chocolate',
+           currency: 'eur',
+           amount: price
+          });
+        }
     </script>
 </head>
 
@@ -52,8 +90,8 @@
               </h1>
                 <div class="contenedor_btn_cabecera">
                     <a href="" class="btn_compra1">COMPRA AHORA</a>
-                    <a href="#popup1" class="btn_desplegable">SABOR VAINILLA</a>
-                    <a href="#popup1" class="btn_desplegable">SABOR CHOCOLATE</a>
+                    <a href="#popup1" class="btn_desplegable" onclick="$('#vainilla').val(1).change()">SABOR VAINILLA</a>
+                    <a href="#popup1" class="btn_desplegable" onclick="$('#chocolate').val(1).change()">SABOR CHOCOLATE</a>
                 </div>
             </div>
         </div>
@@ -213,46 +251,48 @@
 
 <div id="popup1" class="overlay">
 	<div class="popup">
-		<h2>Estás a un paso de tu TastyFit</h2>
+		<h2>Estás a un paso de tu FitShake</h2>
 		<a class="close" href="#">&times;</a>
-    <form class="content">
+    <form class="content" onsubmit="validar();">
       <div class="half">
         <div class="form-title">Nombre</div>
-        <input class="form-field" type="text" name="nombre" /><br />
+        <input class="form-field" type="text" name="nombre" required /><br />
 
         <div class="form-title">Apellidos</div>
-        <input class="form-field" type="text" name="apellidos" /><br />
+        <input class="form-field" type="text" name="apellidos" required /><br />
 
         <div class="form-title">Email</div>
-        <input class="form-field" type="text" name="email" /><br />
+        <input class="form-field" type="email" name="email" required /><br />
 
         <div class="half">
           <div class="form-title">VAINILLA</div>
-          <input class="form-field" id="vainilla" type="number" value="1" name="vainilla" /><br />
+          <input class="form-field" id="vainilla" type="number" value="0" min="0" name="vainilla" /><br />
         </div>
         <div class="half">
           <div class="form-title">CHOCOLATE</div>
-          <input class="form-field" id="chocolate" type="number" value="1" name="chocolate" /><br />
+          <input class="form-field" id="chocolate" type="number" value="0" min="0" name="chocolate" /><br />
         </div>
       </div>
       <div class="half">
         <div class="form-title">Dirección</div>
-        <input class="form-field" type="text" name="direccion" /><br />
+        <input class="form-field" type="text" name="direccion" required /><br />
 
         <div class="form-title">Población</div>
-        <input class="form-field" type="text" name="poblacion" /><br />
+        <input class="form-field" type="text" name="poblacion" required /><br />
 
         <div class="form-title">Código Postal</div>
-        <input class="form-field" type="text" name="codigo_postal" /><br />
+        <input class="form-field" type="text" name="codigo_postal" required /><br />
 
         <div class="submit-container">
-          <input class="submit-button" type="submit" value="A caja: 25€" />
+          <input class="submit-button" type="submit" value="A caja: 0€" />
         </div>
       </div>
     </form>
 	</div>
 </div>
 
+<script
+    src="https://checkout.stripe.com/checkout.js"></script>
 </body>
 
 </html>

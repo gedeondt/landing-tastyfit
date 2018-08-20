@@ -511,7 +511,7 @@ footer {
 }
 
 @media screen and (max-width:768px) {
-     .titular_cabecera h1 {
+    .titular_cabecera h1 {
         font-size: 55px;
         line-height: 60px;
     }
@@ -549,9 +549,24 @@ footer {
         float: none;
         margin: auto;
     }
-    .producto_cabecera {
-        display: none;
+    .img_producto_cabecera {
+        width: 200px;
     }
+
+    .producto_cabecera {
+        height: 200px;
+    }
+
+    .texto_producto_cabecera {
+        top: 90px;
+        left: 210px;
+    }
+
+    .texto_producto_cabecera2 {
+        top: 120px;
+        left: 210px;
+    }
+
     .titular_cabecera {
         margin-left: 140px;
         width: 55%;
@@ -579,6 +594,27 @@ footer {
         padding: 0px 10px;
     }
 }
+
+@media screen and (max-width:640px) {
+    .texto_producto_cabecera {
+        font-size: 14px;
+        width: 150px;
+        left: 190px;
+    }
+
+    .texto_producto_cabecera2 {
+        font-size: 14px;
+        width: 150px;
+        left: 190px;
+    }
+}
+
+@media screen and (max-width:578px) {
+    footer {
+        margin-top: -6px;
+    }
+}
+
 
 /* Pop up */
 .button:hover {
