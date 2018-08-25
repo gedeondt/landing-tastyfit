@@ -654,8 +654,8 @@ footer {
 }
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 10px;
+  right: 20px;
   transition: all 200ms;
   font-size: 30px;
   font-weight: bold;
@@ -742,6 +742,13 @@ footer {
    color: #e84775;
    text-shadow: #ffffff 0 1px 0;
    }
+
+.form-title input {
+   display: inline;
+   float: left;
+   width: 20px;
+   }
+
 .submit-container {
    margin:8px 0;
    text-align:right;
@@ -762,3 +769,5 @@ footer {
     border: 0px;
     cursor: pointer;
 }
+
+#loader { display: none; }
