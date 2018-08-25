@@ -110,8 +110,8 @@
               </h1>
                 <div class="contenedor_btn_cabecera">
                     <a href="" class="btn_compra1">COMPRA AHORA</a>
-                    <a href="#popup1" class="btn_desplegable" onclick="$('#vainilla').val(1).change()">SABOR VAINILLA</a>
-                    <a href="#popup1" class="btn_desplegable" onclick="$('#chocolate').val(1).change()">SABOR CHOCOLATE</a>
+                    <a href="#popup1" class="btn_desplegable" onclick="$('#vainilla').val(1).change(); $(body).addClass('popup-visible');">SABOR VAINILLA</a>
+                    <a href="#popup1" class="btn_desplegable" onclick="$('#chocolate').val(1).change(); $(body).addClass('popup-visible');">SABOR CHOCOLATE</a>
                 </div>
             </div>
         </div>
@@ -272,7 +272,7 @@
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>Estás a un paso de tu FitShake</h2>
-		<a class="close" href="#">&times;</a>
+		<a class="close" href="#" onclick="$(body).removeClass('popup-visible');">&times;</a>
     <img id="loader" src="img/loader.gif" />
     <form id="checkout" class="content" onsubmit="validar();">
       <div class="half">
