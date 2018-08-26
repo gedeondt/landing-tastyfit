@@ -75,6 +75,8 @@
                  }
               });
             }
+
+            return false;
           });
 
 
@@ -274,7 +276,7 @@
 		<h2>Estás a un paso de tu FitShake</h2>
 		<a class="close" href="#" onclick="$(body).removeClass('popup-visible');">&times;</a>
     <img id="loader" src="img/loader.gif" />
-    <form id="checkout" class="content" onsubmit="validar();">
+    <form id="checkout" class="content" onsubmit="validar(); return false;">
       <div class="half">
         <div class="form-title">Nombre</div>
         <input class="form-field" type="text" name="nombre" required /><br />
