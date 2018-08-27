@@ -36,6 +36,24 @@
             });
         })
 
+        function suscribir()
+        {
+          $.ajax({
+             url: "https://script.google.com/macros/s/AKfycbzLT0YN2nUsbad3ZSNGW4j8CXRn-dMFZIFSic1DRuWYUkXMX5M/exec",
+             jsonp: "callback",
+             dataType: "jsonp",
+
+             data: {
+               email: $('input[name="suscripcion"]').val(),
+             },
+
+             success: function( response ) {
+               alert("¡Gracias por suscribirte!");
+               $('input[name="suscripcion"]').val('');
+             }
+          });
+        }
+
         function validar()
         {
           loader.show();
@@ -256,8 +274,8 @@
     <h3>SUSCRÍBETE A NUESTRA NEWSLETTER</h3>
 
     <div class="contenedor_form">
-        <form action="">
-            <input type="text" class="campo" placeholder="Introduce tu email">
+        <form action="" onsubmit="suscribir(); return false;">
+            <input type="email" class="campo" placeholder="Introduce tu email" name="suscripcion">
             <input type="submit" class="enviar" value="ENVIAR">
         </form>
 
