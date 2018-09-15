@@ -421,6 +421,10 @@ footer {
     text-align: center;
 }
 
+.legales, .legales a {
+  color: white;
+  padding-left: 10px;
+}
 .logo_pie {
     width: 255px;
     margin: auto;
@@ -430,6 +434,8 @@ footer {
     width: 100%;
     height: auto;
 }
+
+.cc-revoke { display: none !important; }
 
 @media screen and (max-width:1350px) {
     .bloque2_2 {
