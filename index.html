@@ -110,6 +110,30 @@
           return false;
         }
     </script>
+
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#e84775"
+        },
+        "button": {
+          "background": "#ffffff"
+        }
+      },
+      "type": "opt-in",
+      "content": {
+        "message": "Esta web utiliza cookies para guardar estadísticas del sitio",
+        "dismiss": "Las quiero",
+        "allow": "Perfecto",
+        "link": "Aprender más"
+      }
+    })});
+    </script>
 </head>
 
 <body>
