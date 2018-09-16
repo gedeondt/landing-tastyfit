@@ -371,6 +371,8 @@ body.popup-visible  {
     color: #e84775;
 }
 
+.img_avatar { border-radius: 50%; max-width: 50px; }
+
 .bloque5 {
     background-image: url(img/fondo_bloque5.jpg);
     background-repeat: no-repeat;
