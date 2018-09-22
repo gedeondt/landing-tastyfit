@@ -20,7 +20,7 @@
 
             $(".btn_compra1").click(function (e) {
                 e.preventDefault();
-
+                gtag('event','boton-compra-despliegue');
                 if ($despliega == 0) {
                     $(".contenedor_btn_cabecera").css("height", "220px");
                     $despliega = 1;
@@ -32,6 +32,7 @@
             })
 
             $('#vainilla,#chocolate').change(function(){
+              gtag('event','cambio-cantidad');
               var price = (parseInt($('#vainilla').val()) + parseInt($('#chocolate').val())) * 25;
               $('.submit-button').val("A caja: "+price+"€");
             });
@@ -39,6 +40,7 @@
 
         function suscribir()
         {
+          gtag('event','suscripcion');
           $.ajax({
              url: "https://script.google.com/macros/s/AKfycbwqAXHZdj-RNcUVzJQ3BqQopeebz2P2y4oS0RdHeOJwi8ptSnM6/exec",
              jsonp: "callback",
@@ -57,6 +59,8 @@
 
         function validar()
         {
+          gtag('event','validar');
+
           loader.show();
           checkout.hide();
 
@@ -67,6 +71,7 @@
 
             token: function(token) {
               loader.show();
+              gtag('event','token-recibido');
 
               $.ajax({
                  url: "https://script.google.com/macros/s/AKfycbxwDZz4lvKm0BnUSDZQTk_7XjiWFvLgMCrd7Q22jg/exec",
@@ -88,6 +93,7 @@
                  },
 
                  success: function( response ) {
+                   gtag('event','compra-finalizada');
                    $("#checkout").html("<p>¡¡Muchas gracias por tu compra!! En breve recibirás un correo electrónico con tu pedido.</p>");
                    checkout.show();
                    loader.hide();
