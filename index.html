@@ -74,7 +74,7 @@
               gtag('event','token-recibido');
 
               $.ajax({
-                 url: "https://script.google.com/macros/s/AKfycbxwDZz4lvKm0BnUSDZQTk_7XjiWFvLgMCrd7Q22jg/exec",
+                 url: "https://script.google.com/macros/s/AKfycbwqAXHZdj-RNcUVzJQ3BqQopeebz2P2y4oS0RdHeOJwi8ptSnM6/exec",
                  jsonp: "callback",
                  dataType: "jsonp",
 
@@ -83,6 +83,7 @@
                    apellidos: $('input[name="apellidos"]').val(),
                    email: $('input[name="email"]').val(),
                    direccion: $('input[name="direccion"]').val(),
+                   telefono: $('input[name="telefono"]').val(),
                    poblacion: $('input[name="poblacion"]').val(),
                    codigo_postal: $('input[name="codigo_postal"]').val(),
                    vainilla: $('input[name="vainilla"]').val(),
@@ -350,6 +351,9 @@
 
         <div class="form-title">Dirección</div>
         <input class="form-field" type="text" name="direccion" required /><br />
+
+        <div class="form-title">Teléfono</div>
+        <input class="form-field" type="text" name="telefono" required /><br />
 
       </div>
       <div class="half">
